@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, Download, Mail, Github, Linkedin, Code, Terminal } from 'lucide-react';
+import profileImg from '../assets/linkdinprofile.jpg';
 
 export default function HeroSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -42,7 +43,7 @@ export default function HeroSection() {
         <div className={`mb-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-blue-500 shadow-lg">
   <img
-    src="/src/assets/profile.jpg" // Make sure your image is saved here
+    src={profileImg} // Make sure your image is saved here
     alt="Shreya Datir"
     className="object-cover w-full h-full"
   />
@@ -77,7 +78,7 @@ export default function HeroSection() {
         {/* CTA Buttons */}
         <div className={`flex flex-col sm:flex-row gap-6 mb-16 transition-all duration-1000 delay-800 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <a
-  href="https://myssdportfolio.netlify.app/Shreya_Datir_Resume.pdf"
+  href="/Resume_Shreya.pdf"
   target="_blank"
   rel="noopener noreferrer"
   className="group px-8 py-4 border-2 border-gray-600 rounded-full font-semibold text-gray-300 hover:border-blue-400 hover:text-white transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/25"
